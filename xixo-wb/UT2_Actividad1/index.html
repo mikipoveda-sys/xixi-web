@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - HTML5</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="inicio">Actividad 2: Etiquetas y atributos comunes en HTML</h1>
+    <p title="Descripción de la actividad">
+      Esta página incluye títulos, párrafos, listas, hipervínculos, imágenes, tablas y formularios,
+      usando atributos para mejorar accesibilidad y funcionalidad.
+    </p>
+  </header>
+
+  <main>
+    <!-- LISTAS -->
+    <section aria-labelledby="listas-titulo">
+      <h2 id="listas-titulo">Listas</h2>
+
+      <h3>Lista no ordenada (ul)</h3>
+      <ul>
+        <li>HTML estructura el contenido</li>
+        <li>CSS da estilo</li>
+        <li>JavaScript aporta interactividad</li>
+      </ul>
+
+      <h3>Lista ordenada (ol)</h3>
+      <ol>
+        <li>Crear el archivo <strong>index.html</strong></li>
+        <li>Escribir la estructura</li>
+        <li>Probar en el navegador</li>
+      </ol>
+    </section>
+
+    <!-- ENLACES -->
+    <section aria-labelledby="enlaces-titulo">
+      <h2 id="enlaces-titulo">Hipervínculos</h2>
+      <p>
+        Enlace externo:
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer"
+          title="Documentación HTML en MDN">
+          Documentación de HTML (MDN)
+        </a>
+      </p>
+
+      <p>
+        Enlace interno (ancla):
+        <a href="#formulario-titulo" title="Ir al formulario">Ir al formulario</a>
+      </p>
+    </section>
+
+    <!-- IMAGEN -->
+    <section aria-labelledby="imagen-titulo">
+        <h2 id="imagen-titulo">Imagen</h2>
+        <figure>
+            <img 
+            src="https://picsum.photos/300/200" 
+            alt="Imagen de ejemplo generada automáticamente" 
+            width="300"
+            title="Imagen de ejemplo"
+            />
+            <figcaption>
+                Ejemplo de imagen con texto alternativo (alt) para accesibilidad.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- TABLA -->
+    <section aria-labelledby="tabla-titulo">
+      <h2 id="tabla-titulo">Tabla</h2>
+
+      <table border="1">
+        <caption>
+          Ejemplo de tabla de horarios (caption mejora la accesibilidad)
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lunes</th>
+            <td>18:00</td>
+            <td>Repaso HTML</td>
+          </tr>
+          <tr>
+            <th scope="row">Miércoles</th>
+            <td>18:00</td>
+            <td>Práctica de tablas y formularios</td>
+          </tr>
+          <tr>
+            <th scope="row">Viernes</th>
+            <td>18:00</td>
+            <td>Subir a GitHub Pages</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section aria-labelledby="formulario-titulo">
+      <h2 id="formulario-titulo">Formulario</h2>
+
+      <form action="#" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Contacto</legend>
+
+          <p>
+            <label for="nombre">Nombre:</label><br />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe tu nombre"
+              required
+              aria-required="true"
+            />
+          </p>
+
+          <p>
+            <label for="email">Correo electrónico:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nombre@ejemplo.com"
+              required
+              aria-required="true"
+            />
+          </p>
+
+          <p>
+            <label for="motivo">Motivo:</label><br />
+            <select id="motivo" name="motivo">
+              <option value="info">Solicitar información</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="otro">Otro</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="mensaje">Mensaje:</label><br />
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              cols="35"
+              placeholder="Escribe tu mensaje..."
+            ></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="acepto" name="acepto" required aria-required="true" />
+            <label for="acepto">Acepto la política de privacidad</label>
+          </p>
+
+          <button type="submit" title="Enviar formulario">Enviar</button>
+          <button type="reset" title="Borrar campos">Borrar</button>
+        </fieldset>
+      </form>
+
+      <p>
+        <a href="#inicio" title="Volver arriba">Volver al inicio</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Actividades UT2</p>
+  </footer>
+</body>
+</html>
